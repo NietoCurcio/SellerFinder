@@ -3,9 +3,11 @@ import * as Actions from './actionTypes'
 const AppReducer = (state, action) => {
   switch (action.type) {
     case Actions.FETCH_MOST:
-      return { ...state, loading: false, mostPurchased: action.payload }
+      return { ...state, mostPurchased: action.payload }
+    case Actions.FETCH_SELLERS:
+      return { ...state, sellers: action.payload }
     case Actions.LOADING:
-      return { ...state, loading: true }
+      return { ...state, loading: action.payload }
     case Actions.FETCH_FAILED:
       return {
         ...state,

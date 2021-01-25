@@ -7,7 +7,7 @@ function HomePage() {
   const appContext = useContext(AppContext)
 
   useEffect(() => {
-    appContext.getMostPurchased()
+    appContext.getData()
   }, [])
 
   return (
@@ -16,11 +16,17 @@ function HomePage() {
       {appContext.loading ? (
         <Spinner />
       ) : (
-        appContext.mostPurchased.map((product) => (
-          <ul className="list-unstyled">
-            <ProductItem key={product.id} product={product} />
-          </ul>
-        ))
+        <ul className="list-unstyled">
+          {appContext.mostPurchased.map((product) => (
+            <ProductItem
+              key={product.id}
+              product={product}
+              seller={appContext.sellers.find(
+                (seller) => seller.id === product.id
+              )}
+            />
+          ))}
+        </ul>
       )}
     </div>
   )
