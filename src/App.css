@@ -40,3 +40,21 @@ nav a:hover {
 .my-3 {
   margin: 3rem 0;
 }
+
+.product-item {
+  cursor: pointer;
+}
+
+.product-item {
+  background-color: var(--dark);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 15px;
+  align-items: center;
+}
+
+.product-item > div {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+}

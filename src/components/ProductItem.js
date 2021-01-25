@@ -1,12 +1,24 @@
 import React from 'react'
 import Media from 'react-bootstrap/Media'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 const ProductItem = ({ product, seller }) => {
+  const Reputation = ({ reputation }) => {
+    let stars = []
+    for (let i = 0; i < reputation; i++) {
+      stars.push(1)
+    }
+    return stars.map((star, index) => (
+      <FontAwesomeIcon key={index} icon={faStar} />
+    ))
+  }
+
   return (
-    <Media as="li">
+    <Media as="li" className="product-item my-4">
       <img
-        width={64}
-        height={64}
+        width={94}
+        height={94}
         className="mr-3"
         src={product.image}
         alt={product.name}
@@ -14,8 +26,10 @@ const ProductItem = ({ product, seller }) => {
       <Media.Body>
         <h5>{product.name}</h5>
         <h4>{product.price}</h4>
-        <h3>{seller.name}</h3>
-        <h2>{seller.reputation}</h2>
+        <div>
+          {console.log(seller.reputation)}
+          <Reputation reputation={seller.reputation} />
+        </div>
       </Media.Body>
     </Media>
   )

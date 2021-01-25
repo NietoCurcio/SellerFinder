@@ -22,7 +22,7 @@ function HomePage() {
               key={product.id}
               product={product}
               seller={appContext.sellers.find(
-                (seller) => seller.id === product.id
+                (seller) => seller.id === product.sellerId
               )}
             />
           ))}
