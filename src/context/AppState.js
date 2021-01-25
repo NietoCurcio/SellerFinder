@@ -8,7 +8,7 @@ const AppState = (props) => {
   const initialState = {
     mostPurchased: [],
     search: [],
-    loading: false,
+    loading: true,
     error: {
       msg: '',
       status: '',
@@ -20,7 +20,7 @@ const AppState = (props) => {
 
   const getMostPurchased = async () => {
     setLoading()
-    const data = await fetch(baseUrl + '/mostPurchased')
+    const data = await fetch(baseUrl + '/most')
       .then(
         (response) => response.json(),
         (err) => {
