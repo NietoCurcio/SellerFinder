@@ -1,0 +1,4 @@
+[build]
+    publish="build"
+[context.production]
+    environment={ BASEURL="https://seller-finder.herokuapp.com/"}
