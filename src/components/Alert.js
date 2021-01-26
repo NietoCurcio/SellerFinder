@@ -6,7 +6,6 @@ const Alert = () => {
   const appContext = useContext(AppContext)
 
   useEffect(() => {
-    console.log(appContext.error)
     if (appContext.error.msg.length) appContext.removeAlert()
   }, [appContext.error])
 
