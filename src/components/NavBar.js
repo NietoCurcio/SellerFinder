@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import {
   Navbar,
   Nav,
@@ -7,12 +7,15 @@ import {
   FormControl,
   Button,
 } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
+import AppContext from '../context/appContext'
 
 const NavBar = () => {
   const [input, setInput] = useState({
     search: '',
   })
+  const { searchProduct } = useContext(AppContext)
+  const history = useHistory()
 
   const handleChange = (e) => {
     setInput({ ...input, [e.target.name]: e.target.value })
@@ -20,7 +23,8 @@ const NavBar = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log("I'm here <3")
+    searchProduct(input.search)
+    history.push('/search')
     setInput({ ...input, search: '' })
   }
 

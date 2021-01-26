@@ -8,6 +8,17 @@ const AppReducer = (state, action) => {
       return { ...state, sellers: action.payload }
     case Actions.FETCH_PRODUCT:
       return { ...state, product: action.payload }
+    case Actions.FETCH_PRODUCTS:
+      return { ...state, products: action.payload }
+    case Actions.SEARCH_PRODUCT:
+      return {
+        ...state,
+        search: state.products.filter((product) => {
+          return product.name
+            .toLowerCase()
+            .includes(action.payload.toLowerCase())
+        }),
+      }
     case Actions.LOADING:
       return { ...state, loading: action.payload }
     case Actions.FETCH_FAILED:
@@ -20,6 +31,8 @@ const AppReducer = (state, action) => {
         },
         loading: false,
       }
+    case Actions.REMOVE_ALERT:
+      return { ...state, error: { msg: '', status: '' } }
     default:
       return state
   }

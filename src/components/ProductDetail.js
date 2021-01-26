@@ -7,11 +7,11 @@ import Comment from './Comment'
 
 const ProductDetail = () => {
   const params = useParams()
-  const history = useHistory()
   const {
     product: { product, seller, comments },
     getProduct,
     loading,
+    setLoading,
   } = useContext(AppContext)
 
   useEffect(() => {
@@ -22,7 +22,12 @@ const ProductDetail = () => {
     // https://medium.com/dailyjs/i-never-understood-javascript-closures-9663703368e8
   }, [])
 
-  return loading ? (
+  if (!loading && !product)
+    return (
+      <h2 className="container mt-3">Server Error. Failed to fetch product</h2>
+    )
+
+  return loading || !product ? (
     <div className="container mt-3">
       <Spinner />
     </div>
@@ -47,7 +52,7 @@ const ProductDetail = () => {
       </div>
       <h3 className="my-2">Opinions about this product</h3>
       {comments.map((comment) => (
-        <Comment comment={comment} />
+        <Comment key={comment.id} comment={comment} />
       ))}
     </div>
   )

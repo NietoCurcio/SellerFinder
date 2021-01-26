@@ -86,6 +86,13 @@ const AppState = (props) => {
           payload: { msg: error.message, status: 'danger' },
         })
       })
+    if (!promises.product) {
+      dispatch({
+        type: Actions.FETCH_FAILED,
+        payload: { msg: 'Could not fetch product', status: 'danger' },
+      })
+      return
+    }
 
     promises.seller = await fetch(
       baseUrl + `/sellers/${promises.product.sellerId}`
@@ -106,6 +113,13 @@ const AppState = (props) => {
         })
       })
 
+    if (!promises.seller) {
+      dispatch({
+        type: Actions.FETCH_FAILED,
+        payload: { msg: 'Could not fetch seller', status: 'danger' },
+      })
+      return
+    }
     // The application gets slow because of 4 fetch calls
     // product, seller, comments and authors of comments
     // but for sake of education...
@@ -184,6 +198,59 @@ const AppState = (props) => {
     setLoading(false)
   }
 
+  const searchProduct = async (input) => {
+    setLoading(true)
+    const products = await fetch(baseUrl + '/products')
+      .then(
+        (res) => res.json(),
+        (err) => {
+          const error = new Error(
+            'Could not connect to the server, failed to fetch products ' + err
+          )
+          throw error
+        }
+      )
+      .catch((err) => {
+        dispatch({
+          type: Actions.FETCH_FAILED,
+          payload: { msg: err.message, status: 'danger' },
+        })
+      })
+
+    if (!products) {
+      dispatch({
+        type: Actions.FETCH_FAILED,
+        payload: { msg: 'Failed to fetch products', status: 'danger' },
+      })
+      return
+    }
+
+    if (products.length) {
+      dispatch({
+        type: Actions.FETCH_PRODUCTS,
+        payload: products,
+      })
+      dispatch({
+        type: Actions.SEARCH_PRODUCT,
+        payload: input,
+      })
+    } else {
+      dispatch({
+        type: Actions.FETCH_FAILED,
+        payload: { msg: 'Failed to fetch products', status: 'danger' },
+      })
+    }
+    setLoading(false)
+  }
+
+  const removeAlert = async () => {
+    setTimeout(() => {
+      dispatch({
+        type: Actions.REMOVE_ALERT,
+      })
+    }, 15000)
+  }
+
   const setLoading = (option) => {
     dispatch({ type: Actions.LOADING, payload: option })
   }
@@ -200,6 +267,9 @@ const AppState = (props) => {
         error: state.error,
         getData,
         getProduct,
+        searchProduct,
+        setLoading,
+        removeAlert,
       }}
     >
       {props.children}
