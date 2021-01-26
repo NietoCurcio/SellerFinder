@@ -146,27 +146,43 @@
   "sellers": [
     {
       "id": 1,
+      "userName": "curcio",
       "name": "Felipe Curcio",
-      "reputation": "5",
-      "location": "Brazil"
+      "password": "$2y$12$pNRXIv0.L3YcpFCaM7jfS.LGOAR8b9dnjkLiRVkVwjYl9ZR1IJFMq",
+      "reputation": 5,
+      "seller": true
     },
     {
       "id": 2,
+      "userName": "henrique",
       "name": "Guilherme Henrique",
-      "reputation": "5",
-      "location": "Brazil"
+      "password": "$2y$12$YvOL90OFTo5xBlGdc4SKTONByD3QtZ7BJE9WuFVggC3p5dhnT/IQi",
+      "reputation": 5,
+      "seller": true
     },
     {
       "id": 3,
+      "userName": "john",
       "name": "John Doe",
-      "reputation": "4",
-      "location": "United States"
+      "password": "$2y$12$u3S2TkoFlLo7TPaEgNrGh.FQ3NvRo5vaQxBvmklOmjE4J7lmwdVTa ",
+      "reputation": 4,
+      "seller": true
     },
     {
       "id": 4,
+      "userName": "jane",
       "name": "Jane Doe",
-      "reputation": "2",
-      "location": "England"
+      "password": "$2y$12$u3S2TkoFlLo7TPaEgNrGh.FQ3NvRo5vaQxBvmklOmjE4J7lmwdVTa ",
+      "reputation": 2,
+      "seller": true
+    },
+    {
+      "id": 5,
+      "userName": "obi",
+      "name": "Obi-Wan",
+      "password": "$2y$12$u3S2TkoFlLo7TPaEgNrGh.FQ3NvRo5vaQxBvmklOmjE4J7lmwdVTa ",
+      "reputation": null,
+      "seller": false
     }
   ]
 }

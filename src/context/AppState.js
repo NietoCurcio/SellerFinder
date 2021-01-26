@@ -10,6 +10,7 @@ const AppState = (props) => {
     search: [],
     sellers: [],
     products: [],
+    product: {},
     loading: true,
     error: {
       msg: '',
@@ -66,6 +67,57 @@ const AppState = (props) => {
     setLoading(false)
   }
 
+  const getProduct = async (id) => {
+    setLoading(true)
+    const promises = { product: null, seller: null }
+    promises.product = await fetch(baseUrl + `/products/${id}`)
+      .then(
+        (response) => response.json(),
+        (err) => {
+          const error = new Error(
+            'Could not connect to the server. Failed to fetch product ' + err
+          )
+          throw error
+        }
+      )
+      .catch((error) => {
+        dispatch({
+          type: Actions.FETCH_FAILED,
+          payload: { msg: error.message, status: 'danger' },
+        })
+      })
+
+    promises.seller = await fetch(
+      baseUrl + `/sellers/${promises.product.sellerId}`
+    )
+      .then(
+        (response) => response.json(),
+        (err) => {
+          const error = new Error(
+            'Could not connect to the server. Failed to fetch seller ' + err
+          )
+          throw error
+        }
+      )
+      .catch((error) => {
+        dispatch({
+          type: Actions.FETCH_FAILED,
+          payload: { msg: error.message, status: 'danger' },
+        })
+      })
+    if (promises.seller && promises.product) {
+      dispatch({ type: Actions.FETCH_PRODUCT, payload: promises })
+    } else {
+      dispatch({
+        type: Actions.FETCH_FAILED,
+        payload: { msg: 'Failed to fetch product', status: 'danger' },
+      })
+    }
+
+    setLoading(false)
+    return 'Done'
+  }
+
   const setLoading = (option) => {
     dispatch({ type: Actions.LOADING, payload: option })
   }
@@ -76,10 +128,12 @@ const AppState = (props) => {
         mostPurchased: state.mostPurchased,
         sellers: state.sellers,
         products: state.products,
+        product: state.product,
         search: state.search,
         loading: state.loading,
         error: state.error,
         getData,
+        getProduct,
       }}
     >
       {props.children}

@@ -1,0 +1,40 @@
+import React, { useContext, useEffect } from 'react'
+import { useParams, useHistory } from 'react-router-dom'
+import AppContext from '../context/appContext'
+import Spinner from './SpinnerState'
+import Reputation from './Reputation'
+
+const ProductDetail = () => {
+  const params = useParams()
+  const history = useHistory()
+  const {
+    product: { product, seller },
+    getProduct,
+    loading,
+  } = useContext(AppContext)
+
+  useEffect(() => {
+    getProduct(params.id)
+    // console.log(appContext.product)
+    // https://stackoverflow.com/questions/54069253/usestate-set-method-not-reflecting-change-immediately
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+  }, [])
+
+  return loading ? (
+    <div className="container mt-3">
+      <Spinner />
+    </div>
+  ) : (
+    <div className="container product-detail mt-3">
+      <h1>{product.name}</h1>
+      <div>
+        <img src={product.image} alt={product.name} />
+        <div>
+          <Reputation reputation={seller.reputation} />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default ProductDetail

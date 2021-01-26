@@ -7,7 +7,7 @@ function HomePage() {
   const appContext = useContext(AppContext)
 
   useEffect(() => {
-    appContext.getData()
+    if (!appContext.mostPurchased.length) appContext.getData()
   }, [])
 
   return (

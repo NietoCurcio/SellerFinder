@@ -1,21 +1,10 @@
 import React from 'react'
 import Media from 'react-bootstrap/Media'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { useHistory } from 'react-router-dom'
+import Reputation from './Reputation'
 
 const ProductItem = ({ product, seller }) => {
   const history = useHistory()
-
-  const Reputation = ({ reputation }) => {
-    let stars = []
-    for (let i = 0; i < reputation; i++) {
-      stars.push(1)
-    }
-    return stars.map((star, index) => (
-      <FontAwesomeIcon key={index} icon={faStar} />
-    ))
-  }
 
   const handleClick = (event, productId) => {
     history.push(`/${productId}`)
@@ -23,7 +12,7 @@ const ProductItem = ({ product, seller }) => {
 
   return (
     <Media
-      onClick={(event, productId) => handleClick(event, product.id)}
+      onClick={(event) => handleClick(event, product.id)}
       as="li"
       className="product-item my-4"
     >

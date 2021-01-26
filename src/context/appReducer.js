@@ -6,6 +6,8 @@ const AppReducer = (state, action) => {
       return { ...state, mostPurchased: action.payload }
     case Actions.FETCH_SELLERS:
       return { ...state, sellers: action.payload }
+    case Actions.FETCH_PRODUCT:
+      return { ...state, product: action.payload }
     case Actions.LOADING:
       return { ...state, loading: action.payload }
     case Actions.FETCH_FAILED:
