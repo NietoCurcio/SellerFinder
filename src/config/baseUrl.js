@@ -1,12 +1,11 @@
 let baseUrl
 
 if (process.env.NODE_ENV === 'production') {
-  console.log('CHEGUEI AQUI IF')
-  console.log(process.env)
   baseUrl = process.env.BASEURL
   console.log(baseUrl)
+  console.log(process.env)
+  if (!baseUrl) baseUrl = 'https://seller-finder.herokuapp.com/'
 } else {
-  console.log('CHEGUEI AQUI ELSE')
   baseUrl = 'http://localhost:5000'
 }
 
