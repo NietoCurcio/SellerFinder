@@ -2,4 +2,4 @@
     publish = "build/"
     command = "npm run build"
 [context.production]
-    environment = { BASEURL = "https://seller-finder.herokuapp.com/" }
+    environment = { BASEURL = "https://seller-finder.herokuapp.com" }
