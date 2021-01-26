@@ -5,6 +5,7 @@ import AppState from './context/AppState'
 import NavBar from './components/NavBar'
 import Alert from './components/Alert'
 import ProductDetail from './components/ProductDetail'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route exact path="/" component={HomePage} />
           <Route exact path="/:id" component={ProductDetail} />
         </Switch>
+        <Footer />
       </Router>
     </AppState>
   )

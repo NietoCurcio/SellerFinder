@@ -37,6 +37,10 @@ nav a:hover {
   max-width: 1100px;
 }
 
+.my-2 {
+  margin: 2rem 0;
+}
+
 .my-3 {
   margin: 3rem 0;
 }
@@ -59,6 +63,65 @@ nav a:hover {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.product-detail {
+.product-detail h1 {
   text-align: center;
+}
+
+.product-detail .detail-card {
+  display: flex;
+  background-color: var(--dark);
+  border-radius: 5px;
+  color: #fff;
+}
+
+.product-detail .detail-card > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.product-detail .detail-card .reputation {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #e7e7e7;
+  border-radius: 5px;
+  padding: 0.2rem;
+  color: var(--dark);
+}
+
+.comment {
+  width: 70%;
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+  background-color: var(--dark);
+  border-radius: 5px;
+  padding: 0.55rem;
+  color: var(--light-blue);
+}
+
+.comment div {
+  text-align: center;
+}
+
+.comment p {
+  padding-left: 0.5rem;
+}
+
+.comment p {
+  color: #fff;
+}
+
+footer {
+  display: block;
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  background-color: var(--dark);
+  color: #fff;
+  margin-top: 3.5rem;
 }

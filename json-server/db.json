@@ -4,21 +4,27 @@
       "id": 1,
       "image": "https://images.unsplash.com/photo-1549122728-f519709caa9c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8Ym9va3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "name": "Best Book",
+      "description": "A book that you learn how to organize everything",
       "price": "250 USD",
+      "sold": 150,
       "sellerId": 1
     },
     {
       "id": 2,
       "image": "https://images.unsplash.com/photo-1489824904134-891ab64532f1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FyfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "name": "Best Car",
+      "description": "This car can get you everywhere",
       "price": "10000 USD",
+      "sold": 120,
       "sellerId": 1
     },
     {
       "id": 3,
       "image": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8Y29tcHV0ZXJ8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "name": "Best Keyboard",
+      "description": "A keyworkd to type a lot of words",
       "price": "300 USD",
+      "sold": 100,
       "sellerId": 1
     }
   ],
@@ -27,119 +33,153 @@
       "id": 1,
       "image": "https://images.unsplash.com/photo-1549122728-f519709caa9c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8Ym9va3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "name": "Best Book",
+      "description": "A book that you learn how to organize everything",
       "price": "250 USD",
+      "sold": 150,
       "sellerId": 1
     },
     {
       "id": 2,
       "image": "https://images.unsplash.com/photo-1489824904134-891ab64532f1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FyfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "name": "Best Car",
+      "description": "This car can get you everywhere",
       "price": "10000 USD",
+      "sold": 120,
       "sellerId": 1
     },
     {
       "id": 3,
       "image": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8Y29tcHV0ZXJ8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "name": "Best Keyboard",
+      "description": "A keyworkd to type a lot of words",
       "price": "300 USD",
+      "sold": 100,
       "sellerId": 1
     },
     {
       "id": 4,
       "image": "https://images.unsplash.com/photo-1591489378430-ef2f4c626b35?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Z3B1fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "name": "GPU",
+      "description": "RTX 2080 TI to get the best graphics",
       "price": "500 USD",
+      "sold": 90,
       "sellerId": 2
     },
     {
       "id": 5,
       "image": "https://images.unsplash.com/photo-1591799265444-d66432b91588?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y3B1fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "name": "CPU",
+      "description": "A Ryzen 5 3500X to run a lot of process in the same time",
       "price": "550 USD",
+      "sold": 80,
       "sellerId": 2
     },
     {
       "id": 6,
       "image": "https://images.unsplash.com/photo-1587202372616-b43abea06c2a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8Y29tcHV0ZXIlMjBjYXNlfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "name": "Computer",
+      "description": "Just a computer",
       "price": "3000 USD",
+      "sold": 70,
       "sellerId": 2
     },
     {
       "id": 7,
       "image": "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hhaXJ8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "name": "Chair",
+      "description": "A comfortable chair",
       "price": "100 USD",
+      "sold": 60,
       "sellerId": 2
     },
     {
       "id": 8,
       "image": "https://images.unsplash.com/photo-1526045612212-70caf35c14df?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c21hcnRwaG9uZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "name": "SmartPhone",
+      "description": "Smartphone to call and send messages to your friends",
       "price": "650 USD",
+      "sold": 50,
       "sellerId": 3
     },
     {
       "id": 9,
       "image": "https://images.unsplash.com/photo-1566125882500-87e10f726cdc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FyZHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "name": "Envelope Card",
+      "description": "The perfect envelope to send a message to your love",
       "price": "10 USD",
+      "sold": 40,
       "sellerId": 3
     },
     {
       "id": 10,
       "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8YmVkfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "name": "Bed",
+      "description": "With this you will sleep all the night like a baby",
       "price": "700 USD",
+      "sold": 30,
       "sellerId": 3
     },
     {
       "id": 11,
       "image": "https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8bGFtcHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "name": "Lamp",
+      "description": "take the light, and light your path",
       "price": "100 USD",
+      "sold": 20,
       "sellerId": 3
     },
     {
       "id": 12,
       "image": "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8Ym9va3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "name": "Books",
+      "description": "Plenty of books to read and gain knowledge",
       "price": "100 USD",
+      "sold": 10,
       "sellerId": 3
     },
     {
       "id": 13,
       "image": "https://images.unsplash.com/photo-1525598912003-663126343e1f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8cGhvbmV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "name": "Telephone",
+      "description": "The telephone to call to your relatives",
       "price": "150 USD",
+      "sold": 5,
       "sellerId": 4
     },
     {
       "id": 14,
       "image": "https://images.unsplash.com/photo-1565876480410-91009978e5b1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8aGVhZHNldHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "name": "Headset",
+      "description": "Hear everything you want in the most quality possible",
       "price": "250 USD",
+      "sold": 4,
       "sellerId": 4
     },
     {
       "id": 15,
       "image": "https://images.unsplash.com/photo-1606904825846-647eb07f5be2?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9kZW18ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "name": "Modem",
+      "description": "Connect yo the internet",
       "price": "160 USD",
+      "sold": 3,
       "sellerId": 4
     },
     {
       "id": 16,
       "image": "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8aGFpciUyMGJydXNofGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "name": "Hair Care",
+      "description": "A hair care, is beautiful hair",
       "price": "800 USD",
+      "sold": 2,
       "sellerId": 4
     },
     {
       "id": 17,
       "image": "https://images.unsplash.com/photo-1563903370181-48241c5c8e21?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8Ym90dGxlJTIwd2F0ZXJ8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "name": "Water",
+      "description": "Water is life, water is us",
       "price": "0",
+      "sold": 1,
       "sellerId": 4
     }
   ],
@@ -150,7 +190,8 @@
       "name": "Felipe Curcio",
       "password": "$2y$12$pNRXIv0.L3YcpFCaM7jfS.LGOAR8b9dnjkLiRVkVwjYl9ZR1IJFMq",
       "reputation": 5,
-      "seller": true
+      "seller": true,
+      "location": "Brazil"
     },
     {
       "id": 2,
@@ -158,7 +199,8 @@
       "name": "Guilherme Henrique",
       "password": "$2y$12$YvOL90OFTo5xBlGdc4SKTONByD3QtZ7BJE9WuFVggC3p5dhnT/IQi",
       "reputation": 5,
-      "seller": true
+      "seller": true,
+      "location": "Brazil"
     },
     {
       "id": 3,
@@ -166,7 +208,8 @@
       "name": "John Doe",
       "password": "$2y$12$u3S2TkoFlLo7TPaEgNrGh.FQ3NvRo5vaQxBvmklOmjE4J7lmwdVTa ",
       "reputation": 4,
-      "seller": true
+      "seller": true,
+      "location": "United States"
     },
     {
       "id": 4,
@@ -174,7 +217,8 @@
       "name": "Jane Doe",
       "password": "$2y$12$u3S2TkoFlLo7TPaEgNrGh.FQ3NvRo5vaQxBvmklOmjE4J7lmwdVTa ",
       "reputation": 2,
-      "seller": true
+      "seller": true,
+      "location": "England"
     },
     {
       "id": 5,
@@ -182,7 +226,8 @@
       "name": "Obi-Wan",
       "password": "$2y$12$u3S2TkoFlLo7TPaEgNrGh.FQ3NvRo5vaQxBvmklOmjE4J7lmwdVTa ",
       "reputation": null,
-      "seller": false
+      "seller": false,
+      "location": "United States"
     }
   ],
   "comments": [
