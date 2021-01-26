@@ -18,6 +18,7 @@ const ProductDetail = () => {
     // console.log(appContext.product)
     // https://stackoverflow.com/questions/54069253/usestate-set-method-not-reflecting-change-immediately
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+    // https://medium.com/dailyjs/i-never-understood-javascript-closures-9663703368e8
   }, [])
 
   return loading ? (

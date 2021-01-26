@@ -115,7 +115,6 @@ const AppState = (props) => {
     }
 
     setLoading(false)
-    return 'Done'
   }
 
   const setLoading = (option) => {

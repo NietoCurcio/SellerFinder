@@ -184,5 +184,31 @@
       "reputation": null,
       "seller": false
     }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "comment": "I'm selling a good product",
+      "sellerId": 1,
+      "productId": 1
+    },
+    {
+      "id": 2,
+      "comment": "I'd to sell the best product",
+      "sellerId": 2,
+      "productId": 2
+    },
+    {
+      "id": 3,
+      "comment": "Nice product, I'll buy it",
+      "sellerId": 3,
+      "productId": 1
+    },
+    {
+      "id": 4,
+      "comment": "Nice!",
+      "sellerId": 5,
+      "productId": 1
+    }
   ]
 }
