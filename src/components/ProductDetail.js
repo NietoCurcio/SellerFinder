@@ -8,7 +8,7 @@ const ProductDetail = () => {
   const params = useParams()
   const history = useHistory()
   const {
-    product: { product, seller },
+    product: { product, seller, comments },
     getProduct,
     loading,
   } = useContext(AppContext)
@@ -28,6 +28,7 @@ const ProductDetail = () => {
   ) : (
     <div className="container product-detail mt-3">
       <h1>{product.name}</h1>
+      {console.log(comments)}
       <div>
         <img src={product.image} alt={product.name} />
         <div>
