@@ -25,13 +25,13 @@ The client-side is a React App and the Server side was configured with [json-ser
 
 ## Deployment
 
-This project is deployed, so you can access the app on [Seller Finder App](https://sellerfinder.netlify.app/) and the server [Seller Finder Server-side](https://seller-finder.herokuapp.com/) and see what the app looks like and how the server is configured. The server communicate with the database, stored in the db.json file, there are four resources that you can access in the server REST API, '/most', '/products', '/sellers' and '/comments'. Comments has a relationship between sellers (author) and products (commented product).
+This project is deployed, so you can access the app on [Seller Finder App](https://sellerfinder.netlify.app/) and the server [Seller Finder Server-side](https://seller-finder.herokuapp.com/) and see what the app looks like and how the server is configured. The server communicates with the database, stored in the db.json file, there are four resources that you can access in the server REST API, '/most', '/products', '/sellers' and '/comments'. Comments has a relationship between sellers (author) and products (commented product).
 
 ## React Context API
 
 This App uses React Context API (React.useContext() Hook) to handle state:
 
-Is pretty similar to Redux, since both were inpisred in the flux architeture, using the unidireaction data flow. I like to think this thought process as "CARS" flow, *C*omponent, *A*ctions, *R*educer and *S*tore, because the store cannot be changed without following this pipeline.
+Is pretty like Redux, since both were inpisred in the flux architeture, using the unidireaction data flow. I like to think this thought process as "CARS" flow, *C*omponent, *A*ctions, *R*educer and *S*tore, because the store cannot be changed without following this pipeline.
 
 <p align="center">
   <img src="https://github.com/NietoCurcio/SellerFinder/blob/main/.github/screenshot3.png?raw=true" width="750" alt="Seller Finder">
@@ -50,9 +50,9 @@ useEffect(() => {
   }, [])
 ```
 
-I think the code above is a good example of closure. I've tried to debug code like that sometimes and studying this project I could notice why the console.log shows the same content in both, before and after getProduct(), even if I use an 'await' together with an async function declared in the Effect, or setTimeout. The appContext.product does not belongs to the environment of the effect callback function, so it will look in the outer function (the Component) and store its information as it is, in the time the callback function was created. It's like the Backpack of variables that the function can see (Closure), it's how codes that return a function that uses a variable of an outer function works, then appContext.product is a empty object in its closure (time that the function was created), the empty object is put in the function backpack of variables.
+I think the code above is a good example of closure. I've tried to debug code like that sometimes and studying this project I could notice why the console.log shows the same content in both, before and after getProduct(), even if I use an 'await' together with an async function declared in the Effect, or setTimeout. The appContext.product does not belong to the environment of the effect callback function, so it will look in the outer function (the Component) and store its information as it is, in the time the callback function was created. It's like the Backpack of variables that the function can see (Closure), it's how codes that return a function that uses a variable of an outer function works, then appContext.product is a empty object in its closure (time that the function was created), the empty object is put in the function backpack of variables.
 
-Because of that if you use store.getState() (talking about Redux now) provided by useStore hook in react-redux package, you can see the difference, because when you call before, the getState() function you have the previous or initial environment (in its function body) and the second (notice that an await keyword in a async function is necessary, so that call getState once the state was updated) will have the new state, the new environment, it's the same idea of updating state based on the state, avoiding closure issues, setState(count => count + 1) is correct and setState(count + 1) is wrong. Note that I think the appropriate here would be create another useEffect where you put the state that you're concerned about in the dependecies array, to track it.
+Because of that if you use store.getState() (talking about Redux now) provided by useStore hook in react-redux package, you can see the difference, because when you call before, the getState() function you have the previous or initial environment (in its function body) and the second (notice that an await keyword in a async function is necessary, so that call getState once the state was updated) will have the new state, the new environment, it's the same idea of updating state based on the state, avoiding closure issues, setState(count => count + 1) is correct and setState(count + 1) is wrong. Note that I think the appropriate here would be create another useEffect where you put the state that you're concerned about in the dependencies array, to track it.
 
 Look at the code below, I think it was another good example to my learning process:
 
@@ -95,7 +95,7 @@ useEffect(() => {
 ```
 
 validate function is a dependency of the effect and the component is re-rendered, the reference of validate (declared above the useEffect) will be different at every render.
-Then we need to wrap the validate function in useCallback hook, is a dependency of the effect, but only creates a new reference if the dependencies of the validade function have changed, otherwise, same input, same output, nothings has changed. If don't we get the following error by our good ESLint.
+Then we need to wrap the validate function in useCallback hook, is a dependency of the effect, but only creates a new reference if the dependencies of the validate function have changed, otherwise, same input, same output, nothings has changed. If don't we get the following error by our good ESLint.
 
 `"The 'validate' function makes the dependencies of useEffect Hook (at line 96) change on every render. Move it inside the useEffect callback. Alternatively, wrap the definition of 'validate' in its own useCallback() Hook  react-hooks/exhaustive-deps"`
 
