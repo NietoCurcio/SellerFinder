@@ -13,7 +13,7 @@ The client-side is a React App and the Server side was configured with [json-ser
 </p>  -->
 
 <table>
-  <tr>
+  <tr style="display: flex; flex-wrap: wrap;">
     <td><p align="center">
   <img src="https://github.com/NietoCurcio/SellerFinder/blob/main/.github/screenshot1.png?raw=true" width="750" alt="Seller Finder">
 </p></td>
