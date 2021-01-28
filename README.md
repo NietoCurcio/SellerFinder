@@ -2,15 +2,17 @@
 
 > My Final project to conclude Front-End Web Development with React on Coursera, Coursera Honors Content.
 
+An App to join buyers to sellers.
+
 ## React App
 
 The client-side is a React App and the Server side was configured with [json-server](https://github.com/typicode/json-server) package. It also uses react-router-dom and react-bootstrap, to handle front-end routes and user interfaces, respectively.
 
 
 | <p align="center">
-  <img src="https://github.com/NietoCurcio/SellerFinder/blob/main/screenshot1.png?raw=true" width="750" alt="Seller Finder">
+  <img src="https://github.com/NietoCurcio/SellerFinder/blob/main/.github/screenshot1.png?raw=true" width="750" alt="Seller Finder">
 </p> | <p align="center">
-  <img src="https://github.com/NietoCurcio/SellerFinder/blob/main/screenshot2.png?raw=true" width="750" alt="Seller Finder">
+  <img src="https://github.com/NietoCurcio/SellerFinder/blob/main/.github/screenshot2.png?raw=true" width="750" alt="Seller Finder">
 </p> |
 
 ## Deployment
@@ -24,7 +26,7 @@ This App uses React Context API (React.useContext() Hook) to handle state:
 Is pretty similar to Redux, since both were inpisred in the flux architeture, using the unidireaction data flow. I like to think this thought process as "CARS" flow, *C*omponent, *A*ctions, *R*educer and *S*tore, because the store cannot be changed without following this pipeline.
 
 <p align="center">
-  <img src="https://github.com/NietoCurcio/SellerFinder/blob/main/screenshot3.png?raw=true" width="750" alt="Seller Finder">
+  <img src="https://github.com/NietoCurcio/SellerFinder/blob/main/.github/screenshot3.png?raw=true" width="750" alt="Seller Finder">
 </p>
 
 ## Learning Process
