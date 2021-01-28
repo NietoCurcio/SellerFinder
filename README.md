@@ -8,12 +8,20 @@ An App to join buyers to sellers.
 
 The client-side is a React App and the Server side was configured with [json-server](https://github.com/typicode/json-server) package. It also uses react-router-dom and react-bootstrap, to handle front-end routes and user interfaces, respectively.
 
+<!-- <p align="center">
+ <img src="https://github.com/NietoCurcio/SellerFinder/blob/main/.github/screenshot1.png?raw=true" width="750" alt="Seller Finder">
+</p>  -->
 
-| <p align="center">
+<table>
+  <tr>
+    <td><p align="center">
   <img src="https://github.com/NietoCurcio/SellerFinder/blob/main/.github/screenshot1.png?raw=true" width="750" alt="Seller Finder">
-</p> | <p align="center">
+</p></td>
+    <td><p align="center">
   <img src="https://github.com/NietoCurcio/SellerFinder/blob/main/.github/screenshot2.png?raw=true" width="750" alt="Seller Finder">
-</p> |
+</p></td>
+  </tr>
+</table>
 
 ## Deployment
 
