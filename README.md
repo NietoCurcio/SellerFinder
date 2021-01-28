@@ -95,7 +95,7 @@ useEffect(() => {
 ```
 
 validate function is a dependency of the effect and the component is re-rendered, the reference of validate (declared above the useEffect) will be different at every render.
-Then we need to the validate function in useCallback hook, is a dependency of the effect, but only creates a new reference if the dependencies of the validade function changed, otherwise, same input, same output, nothings has changed. If don't we get the following error by our good ESLint.
+Then we need to wrap the validate function in useCallback hook, is a dependency of the effect, but only creates a new reference if the dependencies of the validade function have changed, otherwise, same input, same output, nothings has changed. If don't we get the following error by our good ESLint.
 
 `"The 'validate' function makes the dependencies of useEffect Hook (at line 96) change on every render. Move it inside the useEffect callback. Alternatively, wrap the definition of 'validate' in its own useCallback() Hook  react-hooks/exhaustive-deps"`
 
