@@ -31,7 +31,7 @@ This project is deployed, so you can access the app on [Seller Finder App](https
 
 This App uses React Context API (React.useContext() Hook) to handle state:
 
-Is pretty like Redux, since both were inpisred in the flux architeture, using the unidireaction data flow. I like to think this thought process as "CARS" flow, *C*omponent, *A*ctions, *R*educer and *S*tore, because the store cannot be changed without following this pipeline.
+Is pretty like Redux, since both were inpisred in the flux architeture, using the unidireaction data flow. I like to think this thought process as "CARS" flow, **C**omponent, **A**ctions, **R**educer and **S**tore, because the store cannot be changed without following this pipeline.
 
 <p align="center">
   <img src="https://github.com/NietoCurcio/SellerFinder/blob/main/.github/screenshot3.png?raw=true" width="750" alt="Seller Finder">
