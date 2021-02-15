@@ -74,7 +74,7 @@ useEffect(() => {
     ...
 ```
 
-store.getState() will bring to us the updated state is a react-redux hook, it has its body, lexical scope and/or closure and reference treated by react-redux. dishesRef keeps track of the props.dishes.dishes reference, it holds a mutable variable (persistent). But notice that even if the dishes state was actually updated, props.dishes.dishes continues empty, that's because of closure, when the function was created, in its closure, the function get props.dishes.dishes as an empty array, since it was like this when the function got created, the function it's not concerned about any state, just the closure, the environment ("backpack of variables") when it was created. Functions sees the props and state from the render it was created in.
+store.getState() will bring to us the updated state is a react-redux hook, it has its body, lexical scope and/or closure and reference treated by react-redux. dishesRef keeps track of the props.dishes.dishes reference, it holds a mutable variable (in a persistent object). But notice that even if the dishes state was actually updated, props.dishes.dishes continues empty, that's because of closure, when the function was created, in its closure, the function get props.dishes.dishes as an empty array, since it was like this when the function got created, the function it's not concerned about any state, just the closure, the environment ("backpack of variables") when it was created. Functions sees the props and state from the render it was created in.
 
 A good quote in the [Eloquent Javascript book](https://eloquentjavascript.net/03_functions.html#h_hOd+yVxaku) is: "When called, the function body sees the environment in which it was created, not the environment in which it is called.".
 
